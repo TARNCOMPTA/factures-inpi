@@ -5,7 +5,8 @@
   "main": "src/inpi-factures.js",
   "scripts": {
     "start": "node src/inpi-factures.js",
-    "connexion": "node src/inpi-factures.js --login"
+    "connexion": "node src/inpi-factures.js --login",
+    "interface": "node src/interface.js"
   },
   "keywords": [
     "inpi",

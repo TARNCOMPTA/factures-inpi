@@ -40,20 +40,38 @@ cd factures-inpi
 
 1. Double-cliquer sur **`install.cmd`** (installe les dépendances et le
    navigateur, crée le fichier `.env`).
-2. Ouvrir **`.env`** avec le Bloc-notes et renseigner :
+2. Double-cliquer sur **`interface.cmd`** : l'interface s'ouvre dans le
+   navigateur. Renseignez-y vos identifiants INPI, cliquez
+   « Enregistrer », puis « Lancer maintenant » — et « Planifier » pour
+   automatiser. C'est tout.
+
+Selon l'ancienneté du compte, la première récupération peut prendre de
+quelques minutes à une heure (tout l'historique est remonté). Les
+factures arrivent dans `Documents\Factures INPI`.
+
+## Interface graphique
+
+`interface.cmd` lance une interface locale dans le navigateur
+(127.0.0.1 uniquement — rien n'est exposé au réseau) :
+
+- compteur de factures et accès direct au dossier ;
+- configuration sans toucher au `.env` (identifiants, dossier, modèle
+  de nom, profondeur d'historique) ;
+- lancement en un clic, journal en direct, bouton Arrêter ;
+- planification de la tâche Windows (jour + heure).
+
+### Sans interface (ligne de commande)
+
+1. Ouvrir **`.env`** avec le Bloc-notes et renseigner :
    ```
    INPI_USERNAME=votre_numero_de_compte
    INPI_PASSWORD=votre_mot_de_passe
    ```
-3. Double-cliquer sur **`connexion.cmd`** : le navigateur s'ouvre et la
-   première récupération se fait sous vos yeux. Selon l'ancienneté du
-   compte, la première passe peut prendre de quelques minutes à une
-   heure (tout l'historique est remonté).
-4. Double-cliquer sur **`planifier.cmd`** pour créer la tâche planifiée
+2. Double-cliquer sur **`connexion.cmd`** : le navigateur s'ouvre et la
+   première récupération se fait sous vos yeux.
+3. Double-cliquer sur **`planifier.cmd`** pour créer la tâche planifiée
    Windows (chaque lundi à 9h00, modifiable dans le Planificateur de
    tâches).
-
-C'est tout. Les factures arrivent dans `Documents\Factures INPI`.
 
 ## Configuration (fichier `.env`)
 
@@ -72,6 +90,7 @@ Remboursement), `{montant}`.
 
 | Commande | Effet |
 |---|---|
+| `interface.cmd` ou `npm run interface` | Interface graphique dans le navigateur |
 | `run.cmd` ou `npm start` | Récupération silencieuse (headless) |
 | `connexion.cmd` ou `npm run connexion` | Avec navigateur visible |
 

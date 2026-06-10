@@ -32,7 +32,6 @@ if not exist .env (
 
 echo.
 echo Installation terminee.
-echo  1. Completez le fichier .env ^(identifiants INPI^)
-echo  2. Lancez connexion.cmd pour une premiere recuperation visible
-echo  3. Lancez planifier.cmd pour automatiser ^(chaque lundi 9h00^)
+echo Lancez interface.cmd : tout se configure ensuite dans le navigateur
+echo (identifiants INPI, lancement, planification automatique).
 pause
