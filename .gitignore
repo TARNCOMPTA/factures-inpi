@@ -1,0 +1,9 @@
+# Secrets — ne jamais versionner
+.env
+
+# Données locales d'exécution
+data/
+logs/
+
+# Node
+node_modules/

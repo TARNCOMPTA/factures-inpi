@@ -1,0 +1,23 @@
+{
+  "name": "factures-inpi",
+  "version": "1.0.0",
+  "description": "Récupération et renommage automatiques des factures INPI (extranet compte client) — pensé pour les cabinets d'expertise comptable",
+  "main": "src/inpi-factures.js",
+  "scripts": {
+    "start": "node src/inpi-factures.js",
+    "connexion": "node src/inpi-factures.js --login"
+  },
+  "keywords": [
+    "inpi",
+    "factures",
+    "playwright",
+    "expert-comptable",
+    "automatisation",
+    "guichet-unique"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "playwright": "^1.49.0"
+  }
+}
